@@ -1,0 +1,28 @@
+$bp-x-small: 37.5em;
+$bp-small: 56.25em;
+$bp-medium: 75em;
+$bp-large: 37.5em;
+
+@mixin xs {
+  @media (min-width: #{$bp-x-small}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$bp-small}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$bp-medium}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$bp-large}) {
+    @content;
+  }
+}
