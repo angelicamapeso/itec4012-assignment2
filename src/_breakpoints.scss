@@ -26,3 +26,9 @@ $bp-large: 37.5em;
     @content;
   }
 }
+
+@mixin cus($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
