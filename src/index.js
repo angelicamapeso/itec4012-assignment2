@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./normalize.css";
 import "./fonts.scss";
+import "./index.scss";
 
 import TopBanner from "./components/TopBanner";
 import MainNav from "./components/MainNav";
@@ -18,10 +19,14 @@ ReactDOM.render(
       <TopBanner />
       <MainNav />
       {/* <App /> */}
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <main>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </div>
+      </main>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
