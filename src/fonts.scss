@@ -18,9 +18,12 @@ a {
   color: colors.$black;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 700;
 
   &:hover {
     text-decoration: underline;
   }
+}
+
+.bold {
+  font-weight: 700;
 }
