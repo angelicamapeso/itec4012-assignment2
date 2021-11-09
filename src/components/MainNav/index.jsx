@@ -11,14 +11,14 @@ export default function MainNav() {
     <header>
       <div className="header-wrapper">
         <a className="logo-wrapper" href="/"><img className="logo" alt="Home" src={Logo} /></a>
-        <div className="nav-icons">
-          <Button><MdOutlineLocationOn className="icon" /></Button>
-          <Button id="truck"><FiTruck className="icon" /></Button>
-          <Button><MdPersonOutline className="icon" /></Button>
-          <Button><FiHeart className="icon" /></Button>
-          <Button><MdOutlineShoppingBasket className="icon" /></Button>
-          <Button><FiMenu className="icon" /></Button>
-        </div>
+        <ul className="nav-icons">
+          <li><Button><MdOutlineLocationOn className="icon" /></Button></li>
+          <li id="truck"><Button><FiTruck className="icon" /></Button></li>
+          <li><Button><MdPersonOutline className="icon" /></Button></li>
+          <li><Button><FiHeart className="icon" /></Button></li>
+          <li><Button><MdOutlineShoppingBasket className="icon" /></Button></li>
+          <li><Button><FiMenu className="icon" /></Button></li>
+        </ul>
         <Search className="search-form" />
       </div>
       <div className="hamburger-menu-icon">

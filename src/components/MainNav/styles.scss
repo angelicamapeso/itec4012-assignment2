@@ -29,6 +29,7 @@ header .header-wrapper {
   padding-bottom: 1rem;
 
   @include breakpoints.cus(700px) {
+    flex-wrap: nowrap;
     padding-bottom: 0;
   }
 
@@ -59,6 +60,8 @@ header .header-wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    list-style: none;
+    padding: 0;
 
     @include breakpoints.sm {
       margin-left: 2rem;
@@ -81,6 +84,10 @@ header .header-wrapper {
 
   #truck {
     display: none;
+
+    @include breakpoints.sm {
+      display: block;
+    }
   }
 
   .search-form {
