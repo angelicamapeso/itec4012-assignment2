@@ -20,11 +20,13 @@ ReactDOM.render(
       <MainNav />
       {/* <App /> */}
       <main>
-        <div>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
+        <div id="grid">
+          <div id="content">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </div>
         </div>
       </main>
     </Router>
