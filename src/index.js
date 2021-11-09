@@ -4,7 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./index.css";
+import "./normalize.css";
 import "./fonts.scss";
 
 import TopBanner from "./components/TopBanner";
