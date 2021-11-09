@@ -1,0 +1,44 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+#search-form {
+  label {
+    display: none;
+  }
+}
+
+#search-input-wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    background-color: colors.$off-white;
+    padding: 0.5rem 3.375rem;
+    border-radius: 50em;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 2px solid transparent;
+  }
+
+  .icon {
+    position: absolute;
+    left: 1.5rem;
+    pointer-events: none;
+    height: 100%;
+  }
+
+  button {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    height: 100%;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
