@@ -8,6 +8,7 @@ import "./index.css";
 import "./fonts.css";
 
 import TopBanner from "./components/TopBanner";
+import MainNav from "./components/MainNav";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 
@@ -15,6 +16,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <TopBanner />
+      <MainNav />
       {/* <App /> */}
       <Routes>
         <Route exact path="/" element={<Home />} />
