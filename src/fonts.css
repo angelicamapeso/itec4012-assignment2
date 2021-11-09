@@ -8,6 +8,7 @@ h5,
 h6,
 p,
 a,
-button {
+button,
+input {
   font-family: "Noto Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
