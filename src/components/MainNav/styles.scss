@@ -1,0 +1,74 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+header {
+  box-sizing: border-box;
+  background: white;
+  width: 100%;
+  padding: 0 1.25rem;
+  display: flex;
+
+  @include breakpoints.xs {
+    padding: 0 2rem;
+  }
+
+  @include breakpoints.sm {
+    padding: 0 3rem;
+  }
+
+  @include breakpoints.md {
+    padding: 0 2.5rem 0 1.25rem;
+  }
+}
+
+header .header-wrapper {
+  flex-grow: 1;
+  display: flex;
+
+  .nav-icons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      margin-left: 2px;
+
+      @include breakpoints.sm {
+        margin-left: 8px;
+      }
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+header .hamburger-menu-icon {
+  display: none;
+}
+
+header {
+  .logo-wrapper {
+    display: inline-block;
+    padding: 0.9375rem 0;
+
+    @include breakpoints.sm {
+      padding: 1.75rem 0;
+    }
+  }
+
+  .logo {
+    display: block;
+    width: 75px;
+    height: 30px;
+
+    @include breakpoints.sm {
+      width: 90px;
+      height: 36px;
+    }
+  }
+}
