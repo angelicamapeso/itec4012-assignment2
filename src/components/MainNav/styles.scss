@@ -24,6 +24,7 @@ header {
 header .header-wrapper {
   flex-grow: 1;
   display: flex;
+  border-bottom: 1px solid colors.$light-gray;
 
   .nav-icons {
     flex-grow: 1;
