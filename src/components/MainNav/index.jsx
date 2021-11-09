@@ -2,6 +2,7 @@ import "./styles.scss";
 
 import Logo from "../../img/ikea-logo.svg";
 import Button from "../Button";
+import Search from "../Search";
 import { MdOutlineLocationOn, MdOutlineShoppingBasket, MdPersonOutline } from "react-icons/md";
 import { FiTruck, FiHeart, FiMenu } from "react-icons/fi";
 
@@ -18,6 +19,7 @@ export default function MainNav() {
           <Button><MdOutlineShoppingBasket className="icon" /></Button>
           <Button><FiMenu className="icon" /></Button>
         </div>
+        <Search className="search-form" />
       </div>
       <div className="hamburger-menu-icon">
 

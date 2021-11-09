@@ -25,37 +25,17 @@ header .header-wrapper {
   flex-grow: 1;
   display: flex;
   border-bottom: 1px solid colors.$light-gray;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
 
-  .nav-icons {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    button {
-      margin-left: 2px;
-
-      @include breakpoints.sm {
-        margin-left: 8px;
-      }
-    }
-
-    .icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      padding: 0.5rem;
-    }
+  @include breakpoints.cus(700px) {
+    padding-bottom: 0;
   }
-}
 
-header .hamburger-menu-icon {
-  display: none;
-}
-
-header {
   .logo-wrapper {
     display: inline-block;
     padding: 0.9375rem 0;
+    order: 1;
 
     @include breakpoints.sm {
       padding: 1.75rem 0;
@@ -72,4 +52,52 @@ header {
       height: 36px;
     }
   }
+
+  .nav-icons {
+    order: 3;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include breakpoints.sm {
+      margin-left: 2rem;
+    }
+
+    button {
+      margin-left: 2px;
+
+      @include breakpoints.sm {
+        margin-left: 8px;
+      }
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
+
+  #truck {
+    display: none;
+  }
+
+  .search-form {
+    order: 4;
+    width: 100%;
+
+    @include breakpoints.cus(700px) {
+      order: 2;
+      width: auto;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+header .hamburger-menu-icon {
+  display: none;
 }
