@@ -4,9 +4,13 @@ import "./styles.scss";
   - light
 */
 
-export default function Button({ children, style = "light" }) {
+export default function Button({
+  children,
+  style = "light",
+  id })
+{
   return(
-    <button class={`btn-${style}`}>
+    <button id={id} className={`btn-${style}`}>
       { children }
     </button>
   );
