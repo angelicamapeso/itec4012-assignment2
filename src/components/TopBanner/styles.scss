@@ -1,0 +1,72 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+#top-banner {
+  background-color: colors.$black;
+  box-sizing: border-box;
+  padding: 0 1.25rem;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include breakpoints.xs {
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  @include breakpoints.sm {
+    padding: 0 3rem;
+  }
+}
+
+#top-banner {
+  a {
+    font-size: 0.75rem;
+    color: white;
+    padding: 1rem 0;
+    text-decoration: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    @include breakpoints.sm {
+      padding: 0.625rem;
+    }
+
+    &:hover {
+      color: colors.$light-gray;
+      text-decoration: underline;
+    }
+
+    svg {
+      margin-right: 0.625rem;
+      width: 1.125rem;
+      height: 1.125rem;
+      flex-shrink: 0;
+    }
+
+    span {
+      line-height: 1rem;
+      max-width: 112rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  a:nth-child(n + 2) {
+    display: none;
+
+    @include breakpoints.sm {
+      display: flex;
+      margin-left: 2.5rem;
+    }
+
+    @include breakpoints.md {
+      margin-left: 4rem;
+    }
+  }
+}

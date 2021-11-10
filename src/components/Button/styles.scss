@@ -1,0 +1,14 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+.btn-light {
+  color: colors.$black;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: colors.$off-white;
+    cursor: pointer;
+  }
+}
