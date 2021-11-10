@@ -27,3 +27,15 @@ a {
 .bold {
   font-weight: 700;
 }
+
+.strike {
+  text-decoration: line-through;
+}
+
+.red {
+  color: colors.$red;
+}
+
+.orange {
+  color: colors.$orange;
+}
