@@ -15,15 +15,15 @@ header nav {
   max-width: breakpoints.$max-page-width;
   padding: 0 1.25rem;
 
-  @include breakpoints.xs {
+  @include breakpoints.sm {
     padding: 0 2rem;
   }
 
-  @include breakpoints.sm {
+  @include breakpoints.md {
     padding: 0 3rem;
   }
 
-  @include breakpoints.md {
+  @include breakpoints.lg {
     display: grid;
     grid-column-gap: 1.25rem;
     grid-template-columns: repeat(13, minmax(0, 1fr));
@@ -43,7 +43,7 @@ header .header-wrapper {
     padding-bottom: 0;
   }
 
-  @include breakpoints.md {
+  @include breakpoints.lg {
     grid-column: 2/14;
     grid-row: 1;
   }
@@ -54,7 +54,7 @@ header .header-wrapper {
     padding: 0.9375rem 0;
     order: 1;
 
-    @include breakpoints.sm {
+    @include breakpoints.md {
       padding: 1.75rem 0;
     }
   }
@@ -64,7 +64,7 @@ header .header-wrapper {
     width: 75px;
     height: 30px;
 
-    @include breakpoints.sm {
+    @include breakpoints.md {
       width: 90px;
       height: 36px;
     }
@@ -80,7 +80,7 @@ header .header-wrapper {
     display: none;
     margin-left: 2rem;
 
-    @include breakpoints.md {
+    @include breakpoints.lg {
       display: flex;
     }
 
@@ -106,7 +106,7 @@ header .header-wrapper {
       height: 2.5rem;
       padding: 0 0.5rem;
 
-      @include breakpoints.sm {
+      @include breakpoints.md {
         margin-left: 8px;
       }
     }
@@ -120,7 +120,7 @@ header .header-wrapper {
   #truck {
     display: none;
 
-    @include breakpoints.md {
+    @include breakpoints.lg {
       display: block;
     }
   }
@@ -128,7 +128,7 @@ header .header-wrapper {
   #menu {
     display: block;
 
-    @include breakpoints.md {
+    @include breakpoints.lg {
       display: none;
     }
   }
@@ -151,7 +151,7 @@ header .header-wrapper {
 header .hamburger-menu-icon {
   display: none;
 
-  @include breakpoints.md {
+  @include breakpoints.lg {
     position: sticky;
     display: flex;
     grid-column: 1;

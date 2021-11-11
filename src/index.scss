@@ -19,7 +19,7 @@ main {
   max-width: breakpoints.$max-page-width;
   padding: 0 1.25rem;
 
-  @include breakpoints.xs {
+  @include breakpoints.sm {
     padding: 0 2rem;
   }
 
@@ -27,7 +27,7 @@ main {
     padding: 0 3rem;
   }
 
-  @include breakpoints.md {
+  @include breakpoints.lg {
     padding: 0 2.5rem 0 1.25rem;
     display: grid;
     grid-column-gap: 1.25rem;
@@ -37,7 +37,7 @@ main {
   > div {
     width: 100%;
 
-    @include breakpoints.md {
+    @include breakpoints.lg {
       grid-column: 2/14;
       grid-row: 1;
     }

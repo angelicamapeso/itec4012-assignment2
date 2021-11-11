@@ -1,14 +1,7 @@
-$bp-x-small: 37.5em;
-$bp-small: 56.25em;
-$bp-medium: 75em;
-$bp-large: 37.5em;
+$bp-small: 37.5em;
+$bp-medium: 56.25em;
+$bp-large: 75em;
 $max-page-width: 112rem;
-
-@mixin xs {
-  @media (min-width: #{$bp-x-small}) {
-    @content;
-  }
-}
 
 @mixin sm {
   @media (min-width: #{$bp-small}) {
