@@ -1,6 +1,12 @@
 @use "../../colors";
 @use "../../breakpoints";
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-light {
   color: colors.$black;
   background-color: white;
