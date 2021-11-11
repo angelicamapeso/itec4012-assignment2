@@ -11,7 +11,7 @@ export default function Card({
   src = "",
   alt="",
 }) {
-  const image = <img className="card-img" src={src} alt={alt}/>
+  const image = <div className="card-img-wrapper"><img className="card-img" src={src} alt={alt}/></div>
 
   return (
     <div
