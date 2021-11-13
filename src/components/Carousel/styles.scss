@@ -1,0 +1,76 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+.carousel {
+  position: relative;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  @include breakpoints.sm {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include breakpoints.md {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.carousel-scroll {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 1.5rem;
+}
+
+.carousel .carousel-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.carousel {
+  .carousel-btn {
+    position: absolute;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    display: none;
+  }
+
+  .carousel-back {
+    top: 50%;
+    left: 0;
+
+    @include breakpoints.md {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .carousel-next {
+    top: 50%;
+    right: 0;
+
+    @include breakpoints.md {
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .arrow-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.carousel-btn {
+  z-index: 100;
+}
+
+.carousel:hover .show {
+  display: block;
+}

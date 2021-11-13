@@ -8,7 +8,7 @@
   flex-wrap: nowrap;
   margin: 2rem calc(1.25rem / 2 * -1);
 
-  @include breakpoints.xs {
+  @include breakpoints.sm {
     flex-direction: row;
   }
 
@@ -21,7 +21,7 @@
     box-sizing: border-box;
     width: 100%;
 
-    @include breakpoints.xs {
+    @include breakpoints.sm {
       width: 50%;
     }
   }
@@ -35,7 +35,7 @@
       margin: calc(1.25rem / 2);
       margin-bottom: 1rem;
 
-      @include breakpoints.md {
+      @include breakpoints.lg {
         margin-bottom: 2rem;
       }
     }
@@ -46,7 +46,7 @@
       margin: calc(1.25rem / 2);
       margin-bottom: 1rem;
 
-      @include breakpoints.md {
+      @include breakpoints.lg {
         margin-bottom: 2rem;
       }
     }
