@@ -1,0 +1,52 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+.carousel {
+  position: relative;
+}
+
+.carousel-scroll {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 1.5rem;
+}
+
+.carousel .carousel-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.carousel {
+  .carousel-btn {
+    position: absolute;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    display: none;
+  }
+
+  .carousel-back {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .carousel-next {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .arrow-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.carousel-btn {
+  z-index: 100;
+}
+
+.carousel:hover .show {
+  display: block;
+}
