@@ -3,6 +3,24 @@
 
 .carousel {
   position: relative;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  @include breakpoints.sm {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include breakpoints.md {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .carousel-scroll {
@@ -28,13 +46,19 @@
   .carousel-back {
     top: 50%;
     left: 0;
-    transform: translate(-50%, -50%);
+
+    @include breakpoints.md {
+      transform: translate(-50%, -50%);
+    }
   }
 
   .carousel-next {
     top: 50%;
     right: 0;
-    transform: translate(50%, -50%);
+
+    @include breakpoints.md {
+      transform: translate(50%, -50%);
+    }
   }
 
   .arrow-icon {
