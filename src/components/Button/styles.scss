@@ -18,3 +18,15 @@ button {
     cursor: pointer;
   }
 }
+
+.btn-dark {
+  color: white;
+  background-color: colors.$black;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: colors.$off-black;
+    cursor: pointer;
+  }
+}

@@ -1,16 +1,23 @@
 import "./styles.scss";
 
-/* Button styles: 
+/* Button styles:
   - light
+  - dark
 */
 
 export default function Button({
   children,
-  style = "light",
-  id })
-{
+  className = "",
+  type = "light",
+  id = "",
+  onClick = (e) => {},
+}) {
   return(
-    <button id={id} className={`btn-${style}`}>
+    <button
+      id={id}
+      className={`btn-${type} ${className}`}
+      onClick={onClick}
+    >
       { children }
     </button>
   );
