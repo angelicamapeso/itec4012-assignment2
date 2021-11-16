@@ -10,3 +10,7 @@ a.link-wrapper:hover,
 a.link-wrapper:hover * {
   cursor: pointer;
 }
+
+a.link-wrapper:hover .hover-underline {
+  text-decoration: underline;
+}
