@@ -45,6 +45,14 @@ main {
   }
 }
 
+section {
+  margin-bottom: 2.5rem;
+
+  @include breakpoints.lg {
+    margin-bottom: 4rem;
+  }
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   height: 0.7rem;
 }
