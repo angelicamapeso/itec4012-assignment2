@@ -40,7 +40,7 @@ export default function Carousel({
   const generatePageLocations = (currentNumPages) => {
     const currentPageLocations = []
     for (let i = 0; i <= currentNumPages; i++) {
-      currentPageLocations.push(((wrapper.current.scrollWidth - wrapper.current.clientWidth) / currentNumPages) * i);
+      currentPageLocations.push(Math.round(((wrapper.current.scrollWidth - wrapper.current.clientWidth) / currentNumPages) * i));
     }
     return currentPageLocations;
   }
