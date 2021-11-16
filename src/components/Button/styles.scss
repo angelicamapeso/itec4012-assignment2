@@ -5,13 +5,25 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 2.5rem;
+}
+
+.btn-icon {
+  border-radius: 50%;
+  padding: 0 0.5rem;
+}
+
+.btn-text {
+  border-radius: 64px;
+  padding: 0 1.5rem;
+  font-size: 0.75rem;
 }
 
 .btn-light {
   color: colors.$black;
   background-color: white;
   border: none;
-  border-radius: 50%;
 
   &:hover {
     background-color: colors.$off-white;
