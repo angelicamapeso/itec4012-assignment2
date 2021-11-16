@@ -104,5 +104,42 @@ section > h2 {
   p {
     margin: 0;
     margin-bottom: 2rem;
+    line-height: 1.571;
+  }
+}
+
+#carousel2 .carousel-wrapper {
+  .link-wrapper {
+    width: calc(309px * 3 / 4);
+    flex-shrink: 0;
+  }
+
+  .link-wrapper:first-child {
+    margin-right: 0.625rem;
+  }
+
+  .link-wrapper:last-child {
+    margin-left: 0.625rem;
+  }
+
+  .link-wrapper:not(:first-child):not(:last-child) {
+    margin: 0 0.625rem;
+  }
+
+  .img-card .card-contents {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2.5rem;
+  }
+
+  .text-card .card-contents {
+    color: white;
+    padding: 2.5rem 2rem;
+
+    h3 {
+      line-height: 1.5;
+      margin: 0;
+    }
   }
 }

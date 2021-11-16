@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { CAROUSEL1 } from "./carousel_items.js";
+import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
 
 // icons
 import { HiOutlineArrowRight } from "react-icons/hi";
@@ -22,7 +22,7 @@ export default function Home() {
                 <LinkWrapper>
                   <Card src={card.src} color={card.color}>
                     <div className="card-text">
-                      <h3 className="underline">{card.title}</h3>
+                      <h3 className="hover-underline">{card.title}</h3>
                       <p>{card.para}</p>
                     </div>
                     <Button><HiOutlineArrowRight className="arrow-icon"/></Button>
@@ -40,6 +40,21 @@ export default function Home() {
       </section>
       <section>
         <h2>Shop products for a more sustainable home</h2>
+        <Carousel id="carousel2" numPages={{ def: 8, sm: 4, md: 3, lg: 2 }} >
+            <LinkWrapper>
+              <Card className="text-card" color="#00853E">
+                <h3 className="hover-underline">Simple changes for an everyday sustainable life</h3>
+                <Button><HiOutlineArrowRight className="arrow-icon" /></Button>
+              </Card>
+            </LinkWrapper>
+            { CAROUSEL2.map(card => (
+                <LinkWrapper>
+                  <Card className="img-card" src={card.src} overlay={true}>
+                    <Button className="bold" contentType="text">{card.btnText}</Button>
+                  </Card>
+                </LinkWrapper>
+              )) }
+        </Carousel>
       </section>
     </>
   );
