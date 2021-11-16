@@ -89,7 +89,7 @@ export default function Carousel({
     >
         <Button
           className={`carousel-btn carousel-back ${scrollPos > 0 ? 'show' : ''}`}
-          type="dark"
+          styleType="dark"
           onClick={handleBackward}
         >
           <IoIosArrowBack className="arrow-icon"/>
@@ -108,7 +108,7 @@ export default function Carousel({
         </div>
         <Button
           className={`carousel-btn carousel-next ${scrollPos < pageLocations[pageLocations.length - 1] ? 'show' : ''}`}
-          type="dark"
+          styleType="dark"
           onClick={handleForward}
         >
           <IoIosArrowForward className="arrow-icon"/>
