@@ -29,6 +29,10 @@
   padding-bottom: 1.5rem;
 }
 
+.carousel-scroll.hide-scrollbar {
+  overflow-x: hidden;
+}
+
 .carousel .carousel-wrapper {
   display: flex;
   align-items: stretch;
@@ -43,9 +47,14 @@
     display: none;
   }
 
+  .carousel-btn.show.dont-hide {
+    display: flex;
+  }
+
   .carousel-back {
     top: 50%;
     left: 0;
+    transform: translate(0, -50%);
 
     @include breakpoints.md {
       transform: translate(-50%, -50%);
@@ -55,6 +64,7 @@
   .carousel-next {
     top: 50%;
     right: 0;
+    transform: translate(0, -50%);
 
     @include breakpoints.md {
       transform: translate(50%, -50%);

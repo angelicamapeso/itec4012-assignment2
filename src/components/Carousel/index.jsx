@@ -11,6 +11,9 @@ export default function Carousel({
   className = "",
   children,
   numPages = { def: 2, sm: 2, md: 2, lg: 2 },
+  btnStyleType = "dark",
+  btnPreventHide = false,
+  hideScrollbar = false,
 }) {
   const [pageLocations, setPageLocations] = useState([]);
   const [scrollPos, setScrollPos] = useState(0);
@@ -88,14 +91,14 @@ export default function Carousel({
       className={'carousel ' + className}
     >
         <Button
-          className={`carousel-btn carousel-back ${scrollPos > 0 ? 'show' : ''}`}
-          styleType="dark"
+          className={`carousel-btn carousel-back ${scrollPos > 0 ? 'show' : ''} ${btnPreventHide ? 'dont-hide' : ''}`}
+          styleType={btnStyleType}
           onClick={handleBackward}
         >
           <IoIosArrowBack className="arrow-icon"/>
         </Button>
         <div
-          className="carousel-scroll custom-scrollbar"
+          className={`carousel-scroll custom-scrollbar ${hideScrollbar ? 'hide-scrollbar' : ''}`}
           ref={scroll}
           onScroll={handleScroll}
         >
@@ -107,8 +110,8 @@ export default function Carousel({
           </div>
         </div>
         <Button
-          className={`carousel-btn carousel-next ${scrollPos < pageLocations[pageLocations.length - 1] ? 'show' : ''}`}
-          styleType="dark"
+          className={`carousel-btn carousel-next ${scrollPos < pageLocations[pageLocations.length - 1] ? 'show' : ''} ${btnPreventHide ? 'dont-hide' : ''}`}
+          styleType={btnStyleType}
           onClick={handleForward}
         >
           <IoIosArrowForward className="arrow-icon"/>
