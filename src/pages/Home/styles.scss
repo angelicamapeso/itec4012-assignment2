@@ -181,3 +181,74 @@ section > h2 {
     padding-top: 1.25rem;
   }
 }
+
+#icon-cards1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .icon-card {
+    flex: 1 1 auto;
+    margin-bottom: 0.0625rem;
+    margin-right: 0.0625rem;
+    height: auto;
+
+    @include breakpoints.sm {
+      width: calc(50% - 0.5rem * 4);
+    }
+
+    @include breakpoints.md {
+      width: calc(25% - 0.5rem);
+    }
+
+    .card-contents {
+      align-items: flex-start;
+      text-align: left;
+      padding: 2rem;
+
+      @include breakpoints.sm {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .icon,
+    p,
+    a {
+      color: colors.$dark-gray;
+    }
+
+    .icon,
+    h3,
+    p,
+    a {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    h3 {
+      line-height: 1.5;
+    }
+
+    p,
+    a {
+      line-height: 1.571;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: colors.$black;
+    }
+  }
+}
+
+section > .service-btn {
+  margin-top: 1.5rem;
+}

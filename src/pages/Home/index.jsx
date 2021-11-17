@@ -1,6 +1,7 @@
 import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
 import { IMAGE_LIST_1 } from "./image_lists.js";
+import { ICON_CARDS_1 } from "./icon_card_list.jsx";
 
 // icons
 import { HiOutlineArrowRight } from "react-icons/hi";
@@ -68,6 +69,20 @@ export default function Home() {
               </LinkWrapper>
           )) }
         </div>
+      </section>
+      <section>
+        <h2>You can do everything yourself, but you don't have to</h2>
+        <div id="icon-cards1">
+          { ICON_CARDS_1.map(card => (
+              <Card className="icon-card" color="#f5f5f5">
+                { card.icon }
+                <h3>{card.title}</h3>
+                <p>{card.descrip}</p>
+                <a href="/">{card.linkTxt}</a>
+              </Card>
+          ))}
+        </div>
+        <Button className="service-btn" styleType="dark" contentType="text">View all services</Button>
       </section>
     </>
   );
