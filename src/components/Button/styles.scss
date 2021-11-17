@@ -31,6 +31,17 @@ button {
   }
 }
 
+.btn-gray {
+  color: colors.$black;
+  background-color: colors.$off-white;
+  border: none;
+
+  &:hover {
+    background-color: colors.$light-gray;
+    cursor: pointer;
+  }
+}
+
 .btn-dark {
   color: white;
   background-color: colors.$black;
