@@ -34,7 +34,7 @@ export default function Home() {
         </Carousel>
       </section>
       <section>
-        <Card className="banner-card" color="#0057a3">
+        <Card className="banner-card dark-banner" color="#0057a3">
           <h2>IKEA Food Click and collect</h2>
           <p>Click and collect is now available for all of your favourite IKEA Food products found in our Swedish Food Market. Like our classic Swedish meatballs, sustainably sourced salmon, refreshing beverages and delicious desserts.</p>
           <Button contentType="text" className="bold">Shop IKEA Food Click and collect</Button>
@@ -99,6 +99,16 @@ export default function Home() {
               </Card>
           ))}
         </div>
+      </section>
+      <section>
+        <Card className="banner-card light-banner" color="#ffde00">
+          <h2>We’re looking for people with a taste for working together</h2>
+          <p>
+            We’re looking for Food co-workers in the Restaurant, Bistro/Café, Swedish Food Market Specialty Shop and Co-worker Restaurant ready to satisfy any customer food cravings.
+          </p>
+          <p>You’re home here. Build your dream job with us.</p>
+          <Button styleType="dark" contentType="text" className="bold">Apply today</Button>
+        </Card>
       </section>
     </>
   );

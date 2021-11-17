@@ -80,9 +80,15 @@ section > h2 {
   }
 }
 
-.banner-card {
-  color: white;
+.light-banner {
+  color: colors.$black;
+}
 
+.dark-banner {
+  color: white;
+}
+
+.banner-card {
   .card-contents {
     padding: 2.5rem;
     padding-bottom: 60px;
@@ -105,6 +111,14 @@ section > h2 {
     margin: 0;
     margin-bottom: 2rem;
     line-height: 1.571;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
   }
 }
 
