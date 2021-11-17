@@ -323,3 +323,49 @@ section > .service-btn {
     margin-top: 4rem;
   }
 }
+
+#image-list3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(1.25rem / 2 * -1);
+
+  .card {
+    margin: calc(1.25rem / 2);
+    flex-grow: 0;
+    flex-basis: calc(100% - 1.25rem);
+
+    @include breakpoints.sm {
+      flex-basis: calc(49.99% - 1.25rem);
+    }
+
+    @include breakpoints.md {
+      flex-basis: calc(33.33% - 1.25rem);
+    }
+  }
+
+  .card-contents {
+    h3,
+    img,
+    p:last-of-type {
+      margin-bottom: 1rem;
+
+      @include breakpoints.lg {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    p {
+      line-height: 1.571;
+      color: colors.$dark-gray;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    button {
+      font-weight: bold;
+    }
+  }
+}

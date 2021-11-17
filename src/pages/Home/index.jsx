@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
-import { IMAGE_LIST_1, IMAGE_LIST_2 } from "./image_lists.jsx";
+import { IMAGE_LIST_1, IMAGE_LIST_2, IMAGE_LIST_3 } from "./image_lists.jsx";
 import { ICON_CARDS_1 } from "./icon_card_list.jsx";
 
 // icons
@@ -113,6 +113,18 @@ export default function Home() {
       <hr />
       <section id="important-info">
         <h2>Important Information</h2>
+        <div id="image-list3">
+          { IMAGE_LIST_3.map(card => (
+              <Card>
+                <h3>{card.title}</h3>
+                <LinkWrapper>
+                  <img src={card.src} alt="" />
+                </LinkWrapper>
+                {card.descrip}
+                <Button styleType="line-light" contentType="text">{card.btnTxt}</Button>
+              </Card>
+          ))}
+        </div>
       </section>
     </>
   );
