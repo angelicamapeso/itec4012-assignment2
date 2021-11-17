@@ -41,3 +41,13 @@ button {
     cursor: pointer;
   }
 }
+
+.btn-line-light {
+  background-color: white;
+  border: 1px solid colors.$light-gray;
+
+  &:hover {
+    border: 1px solid colors.$dark-gray;
+    cursor: pointer;
+  }
+}
