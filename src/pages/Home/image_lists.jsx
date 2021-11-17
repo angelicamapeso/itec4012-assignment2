@@ -10,6 +10,10 @@ import imageList2_1 from "../../img/imageList2_1.webp";
 import imageList2_2 from "../../img/imageList2_2.webp";
 import imageList2_3 from "../../img/imageList2_3.jpg";
 
+import imageList3_1 from "../../img/imageList3_1.webp";
+import imageList3_2 from "../../img/imageList3_2.webp";
+import imageList3_3 from "../../img/imageList3_3.webp";
+
 export const IMAGE_LIST_1 = [
   {
     src: imageList1_1,
@@ -79,3 +83,32 @@ export const IMAGE_LIST_2 = [
   },
 ];
 
+export const IMAGE_LIST_3 = [
+  {
+    title: "Secure it!",
+    src: imageList3_1,
+    descrip: <p>
+      We all want our homes to be a safe place. But in our homes, accidents can put people at risk. Working together, we can help prevent these accidents and make the home a safer place.
+    </p>,
+    btnTxt: "Secure it!",
+  },
+  {
+    title: "Important information on COVID-19",
+    src: imageList3_2,
+    descrip: null,
+    btnTxt: "Read information on COVID-19",
+  },
+  {
+    title: "Product Recalls",
+    src: imageList3_3,
+    descrip: <>
+      <p>
+        <strong>HEROISK</strong> and <strong>TALRIKA</strong>plates, bowls and mugs
+      </p>
+      <p>
+        IKEA takes product safety very seriously and the safety of its customers is a top priority, which is why this recall was issued as a precautionary measure. All IKEA products are tested and comply with applicable standards and legislation.
+      </p>
+    </>,
+    btnTxt: "See all product recalls",
+  },
+];
