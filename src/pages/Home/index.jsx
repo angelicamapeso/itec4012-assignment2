@@ -1,5 +1,6 @@
 import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
+import { IMAGE_LIST_1 } from "./image_lists.js";
 
 // icons
 import { HiOutlineArrowRight } from "react-icons/hi";
@@ -55,6 +56,18 @@ export default function Home() {
                 </LinkWrapper>
               )) }
         </Carousel>
+      </section>
+      <section>
+        <h2>Explore the beautiful possibilities</h2>
+        <div id="image-list1" className="custom-scrollbar">
+          { IMAGE_LIST_1.map(card => (
+              <LinkWrapper>
+                <Card src={card.src}>
+                  <p className="hover-underline">{card.txt}</p>
+                </Card>
+              </LinkWrapper>
+          )) }
+        </div>
       </section>
     </>
   );
