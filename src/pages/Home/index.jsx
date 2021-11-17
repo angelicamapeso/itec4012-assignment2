@@ -111,6 +111,9 @@ export default function Home() {
         </Card>
       </section>
       <hr />
+      <section id="important-info">
+        <h2>Important Information</h2>
+      </section>
     </>
   );
 }

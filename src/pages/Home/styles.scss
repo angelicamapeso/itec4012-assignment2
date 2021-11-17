@@ -315,3 +315,11 @@ section > .service-btn {
     }
   }
 }
+
+#important-info {
+  margin-top: 2.5rem;
+
+  @include breakpoints.sm {
+    margin-top: 4rem;
+  }
+}
