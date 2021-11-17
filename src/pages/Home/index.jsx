@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
-import { IMAGE_LIST_1 } from "./image_lists.js";
+import { IMAGE_LIST_1, IMAGE_LIST_2 } from "./image_lists.jsx";
 import { ICON_CARDS_1 } from "./icon_card_list.jsx";
 
 // icons
@@ -82,7 +82,23 @@ export default function Home() {
               </Card>
           ))}
         </div>
-        <Button className="service-btn" styleType="dark" contentType="text">View all services</Button>
+        <Button className="service-btn bold" styleType="dark" contentType="text">View all services</Button>
+      </section>
+      <section>
+        <h2>More from IKEA Canada</h2>
+        <div id="image-list2">
+          { IMAGE_LIST_2.map(card => (
+              <Card src={card.src}>
+                <p><strong>{card.title}</strong></p>
+                { card.descrip }
+                <Button styleType="dark" contentType="text">{card.btnTxt}</Button>
+                { card.btnTxtSec ?
+                    <Button styleType="line-light" contentType="text">{card.btnTxtSec}</Button> :
+                    null
+                }
+              </Card>
+          ))}
+        </div>
       </section>
     </>
   );

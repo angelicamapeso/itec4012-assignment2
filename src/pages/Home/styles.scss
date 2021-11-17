@@ -252,3 +252,52 @@ section > h2 {
 section > .service-btn {
   margin-top: 1.5rem;
 }
+
+#image-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(1.25rem / 2 * -1);
+
+  .card {
+    margin: calc(1.25rem / 2);
+    margin-bottom: 2.5rem;
+    flex-basis: calc(100% - 1.25rem);
+
+    @include breakpoints.sm {
+      flex-basis: calc(49.99% - 1.25rem);
+      margin: calc(1.25rem / 2);
+    }
+
+    @include breakpoints.md {
+      flex-basis: calc(33.33% - 1.25rem);
+    }
+  }
+
+  .card-contents {
+    color: colors.$dark-gray;
+    padding-top: 1rem;
+
+    @include breakpoints.lg {
+      padding-top: 2.5rem;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      line-height: 1.571;
+    }
+
+    button {
+      font-weight: bold;
+      margin-top: 1rem;
+
+      @include breakpoints.lg {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}
