@@ -110,6 +110,7 @@ export default function Home() {
           <Button styleType="dark" contentType="text" className="bold">Apply today</Button>
         </Card>
       </section>
+      <hr />
     </>
   );
 }
