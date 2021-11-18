@@ -12,6 +12,7 @@ import TopBanner from "./components/TopBanner";
 import MainNav from "./components/MainNav";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.render(
           </div>
         </div>
       </main>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
