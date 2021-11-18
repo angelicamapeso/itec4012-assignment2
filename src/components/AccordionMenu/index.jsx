@@ -39,8 +39,8 @@ export default function AccordionMenu({
         </button>
       </h4>
       <ul className={`accordion-list ${isExpanded ? 'show' : 'hide'}`}>
-        { listItems.map(item => (
-          <li className="accordion-item">
+        { listItems.map((item, i) => (
+          <li key={i} className="accordion-item">
             <LinkWrapper className="underline">
               {item}
             </LinkWrapper>

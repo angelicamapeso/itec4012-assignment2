@@ -28,8 +28,9 @@ export default function Cart() {
       <section className="recommend-section">
         <h2>We recommend</h2>
         <Carousel id="recommended" numPages={{ def: 6, sm: 4, md: 2, lg: 2 }}>
-          { PROD_LIST_1.map(product => (
+          { PROD_LIST_1.map((product, i) => (
               <ProductCard
+                key={i}
                 src={product.src}
                 altSrc={product.altSrc}
                 newProd={product.newProd}

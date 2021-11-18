@@ -39,8 +39,8 @@ export default function Footer() {
               <Button className="bold" styleType="dark" contentType="text">Join now</Button>
             </div>
             <ul className="lists">
-              { ACCORDION_ITEMS.map(item => (
-                  <li>
+              { ACCORDION_ITEMS.map((item, i) => (
+                  <li key={i}>
                     <AccordionMenu
                       title={item.title}
                       listItems={item.items}
@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
           <div className="btn-links">
             <ul>
-              { SOCIAL_MEDIA_ICONS.map(icon => (
-                  <li>
+              { SOCIAL_MEDIA_ICONS.map((icon, i) => (
+                  <li key={i}>
                     <Button className="social-media-btn" styleType="line-light">{icon}</Button>
                   </li>
               ))}
@@ -70,8 +70,8 @@ export default function Footer() {
           <div className="policy">
             <p>This is not the copyright you're looking for</p>
             <ul className="policy-links">
-                { POLICY_LINKS.map(link => (
-                    <li><a href="/">{link}</a></li>
+                { POLICY_LINKS.map((link, i) => (
+                    <li key={i}><a href="/">{link}</a></li>
                 ))}
             </ul>
           </div>

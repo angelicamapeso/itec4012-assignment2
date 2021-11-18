@@ -34,7 +34,7 @@ export default function ProductCard({
     const stars = [];
     for (let i = 1; i <= 5; i ++) {
       stars.push(
-        <BsStarFill className={`star ${i <= starRating ? 'filled' : ''}`} />
+        <BsStarFill key={i} className={`star ${i <= starRating ? 'filled' : ''}`} />
       );
     }
 

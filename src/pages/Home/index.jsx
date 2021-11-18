@@ -63,8 +63,8 @@ export default function Home() {
       <section>
         <h2>Right Now at IKEA</h2>
         <Carousel id="carousel1" numPages={{ def: 6, sm: 3, md: 2, lg: 2 }} >
-            { CAROUSEL1.map(card => (
-                <LinkWrapper>
+            { CAROUSEL1.map((card, i) => (
+                <LinkWrapper key={i}>
                   <Card src={card.src} color={card.color}>
                     <div className="card-text">
                       <h3 className="hover-underline">{card.title}</h3>
@@ -92,8 +92,8 @@ export default function Home() {
                 <Button><HiOutlineArrowRight className="arrow-icon" /></Button>
               </Card>
             </LinkWrapper>
-            { CAROUSEL2.map(card => (
-                <LinkWrapper>
+            { CAROUSEL2.map((card, i) => (
+                <LinkWrapper key={i}>
                   <Card className="img-card" src={card.src} overlay={true}>
                     <Button className="bold" contentType="text">{card.btnText}</Button>
                   </Card>
@@ -104,8 +104,8 @@ export default function Home() {
       <section>
         <h2>Explore the beautiful possibilities</h2>
         <div id="image-list1" className="custom-scrollbar">
-          { IMAGE_LIST_1.map(card => (
-              <LinkWrapper>
+          { IMAGE_LIST_1.map((card, i) => (
+              <LinkWrapper key={i}>
                 <Card src={card.src}>
                   <p className="hover-underline">{card.txt}</p>
                 </Card>
@@ -116,8 +116,8 @@ export default function Home() {
       <section>
         <h2>You can do everything yourself, but you don't have to</h2>
         <div id="icon-cards1">
-          { ICON_CARDS_1.map(card => (
-              <Card className="icon-card" color="#f5f5f5">
+          { ICON_CARDS_1.map((card, i) => (
+              <Card key={i} className="icon-card" color="#f5f5f5">
                 { card.icon }
                 <h3>{card.title}</h3>
                 <p>{card.descrip}</p>
@@ -130,8 +130,8 @@ export default function Home() {
       <section>
         <h2>More from IKEA Canada</h2>
         <div id="image-list2">
-          { IMAGE_LIST_2.map(card => (
-              <Card src={card.src}>
+          { IMAGE_LIST_2.map((card, i) => (
+              <Card key={i} src={card.src}>
                 <p><strong>{card.title}</strong></p>
                 { card.descrip }
                 <Button styleType="dark" contentType="text">{card.btnTxt}</Button>
@@ -157,8 +157,8 @@ export default function Home() {
       <section id="important-info">
         <h2>Important Information</h2>
         <div id="image-list3">
-          { IMAGE_LIST_3.map(card => (
-              <Card>
+          { IMAGE_LIST_3.map((card, i) => (
+              <Card key={i}>
                 <h3>{card.title}</h3>
                 <LinkWrapper>
                   <img src={card.src} alt="" />
@@ -178,8 +178,9 @@ export default function Home() {
           btnPreventHide={true}
           hideScrollbar={true}
         >
-          { BUTTON_LIST_1.map(btnTxt => (
+          { BUTTON_LIST_1.map((btnTxt, i) => (
               <Button
+                key={i}
                 className="bold"
                 styleType="gray"
                 contentType="text"
