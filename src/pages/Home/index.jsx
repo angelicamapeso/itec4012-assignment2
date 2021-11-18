@@ -7,8 +7,12 @@ import { BUTTON_LIST_1 } from "./button_carousel_list.js";
 // icons
 import { HiOutlineArrowRight } from "react-icons/hi";
 
+// images
+import promoImg1 from "../../img/text-img-1.webp";
+import promoImg2 from "../../img/text-img-2.webp";
+import promoImg3 from "../../img/text-img-3.webp";
+
 // components
-import Promotional from "../../page-sections/Promotional";
 import Card from "../../components/Card";
 import Button from "../../components/Button";
 import LinkWrapper from "../../components/LinkWrapper";
@@ -18,7 +22,44 @@ import RoomCard from "../../components/RoomCard";
 export default function Home() {
   return (
     <>
-      <Promotional />
+      <section id="promotional">
+        <div id="main-promotion">
+          <div>
+            <LinkWrapper>
+              <img src={promoImg1} alt="This Green Friday, earn 1.5x the value on your Sell-back item*"/>
+            </LinkWrapper>
+          </div>
+        </div>
+        <div id="additional-promotions">
+          <div>
+            <LinkWrapper>
+              <img src={promoImg2} alt="20% off* all kitchen appliences"/>
+            </LinkWrapper>
+            <LinkWrapper>
+              <p>
+                <span className="bold hover-underline">MEDELNIVÅ</span>
+                <span>Over the range microwave</span>
+                <span className="bold red">$319.00</span>
+                <span>Price valid until Nov 10, 2021</span>
+                <span className="bold strike">$399.00</span>
+              </p>
+            </LinkWrapper>
+          </div>
+          <div>
+            <LinkWrapper>
+              <img src={promoImg3} alt="Make laundry easier. Keep your dirty clothes sorted with a laundry cabinet"/>
+            </LinkWrapper>
+            <LinkWrapper>
+              <p>
+                <span className="bold orange">New</span>
+                <span className="bold hover-underline">NYSJÖN</span>
+                <span>Laundry cabinet</span>
+                <span className="bold">$129.00</span>
+              </p>
+            </LinkWrapper>
+          </div>
+        </div>
+      </section>
       <section>
         <h2>Right Now at IKEA</h2>
         <Carousel id="carousel1" numPages={{ def: 6, sm: 3, md: 2, lg: 2 }} >
