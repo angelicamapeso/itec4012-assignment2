@@ -14,7 +14,6 @@ export default function AccordionMenu({
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    console.log('running');
     if (useAccordion) {
       setIsExpanded(false);
     } else {
