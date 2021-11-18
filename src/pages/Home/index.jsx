@@ -160,6 +160,14 @@ export default function Home() {
         </div>
         <Button className="load-btn bold" styleType="dark" contentType="text">Load 12 more</Button>
       </section>
+      <section id="furniture-info-card">
+        <Card>
+          <h2>Furniture and inspiration for a better everyday life at home</h2>
+          <p>
+          At IKEA Canada you will find well-designed furniture and home furnishings that are functional and affordable. We have everything from <a href="/">IKEA Kitchens</a> and <a href="/">smart home solutions</a> to a large selection of <a href="/">bedroom furniture</a>, <a href="/">sofas</a>, <a href="/">lighting</a>, <a href="/">curtains</a>, <a href="/">bedding</a>,  and more. Our furniture stores are the perfect place for you to find inspiration and get tons of decoration ideas that will help you live in a much more comfortable and sustainable way. Discover our wide range of products in store or online!
+          </p>
+        </Card>
+      </section>
     </>
   );
 }

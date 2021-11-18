@@ -455,3 +455,28 @@ section > .service-btn {
     grid-row: span 3;
   }
 }
+
+#furniture-info-card {
+  .card {
+    @include breakpoints.md {
+      width: calc(7 / 12 * (100% - (11 * 1.25rem)) + (6 * 1.25rem));
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1.45;
+    }
+
+    p {
+      color: colors.$dark-gray;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.571;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
