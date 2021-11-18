@@ -11,9 +11,13 @@ export default function Carousel({
   className = "",
   children,
   numPages = { def: 2, sm: 2, md: 2, lg: 2 },
+  btnStyleType = "dark",
+  btnPreventHide = false,
+  hideScrollbar = false,
 }) {
   const [pageLocations, setPageLocations] = useState([]);
   const [scrollPos, setScrollPos] = useState(0);
+  const [overflowExists, setOverflowExists] = useState(true);
 
   const scroll = useRef(null);
   const wrapper = useRef(null);
@@ -24,7 +28,6 @@ export default function Carousel({
     return  () => window.removeEventListener('resize', handleResize);
   }, [])
 
-
   const calcCurrentNumPages = () => {
     let currentNumPages = numPages.def;
     for (const breakpointSize in BREAKPOINTS) {
@@ -34,13 +37,24 @@ export default function Carousel({
       }
     }
     currentNumPages -= 1;
+
+    if (currentNumPages < 1
+      && wrapper.current.scrollWidth > wrapper.current.offsetWidth
+    ) {
+      currentNumPages = 1;
+    }
+
     return currentNumPages;
   }
 
   const generatePageLocations = (currentNumPages) => {
     const currentPageLocations = []
-    for (let i = 0; i <= currentNumPages; i++) {
-      currentPageLocations.push(((wrapper.current.scrollWidth - wrapper.current.clientWidth) / currentNumPages) * i);
+    if (currentNumPages > 0) {
+      for (let i = 0; i <= currentNumPages; i++) {
+        currentPageLocations.push(Math.round(((wrapper.current.scrollWidth - wrapper.current.offsetWidth) / currentNumPages) * i));
+      }
+    } else {
+      currentPageLocations.push(0);
     }
     return currentPageLocations;
   }
@@ -55,13 +69,17 @@ export default function Carousel({
   }
 
   const handleResize = () => {
+    if (wrapper.current.scrollWidth > wrapper.current.offsetWidth) {
+      setOverflowExists(true);
+    } else {
+      setOverflowExists(false);
+    }
+
     let currentNumPages = calcCurrentNumPages();
 
     let pageLocations = []
-    if (currentNumPages !== pageLocations.length) {
-      pageLocations = generatePageLocations(currentNumPages);
-      setPageLocations(pageLocations);
-    }
+    pageLocations = generatePageLocations(currentNumPages);
+    setPageLocations(pageLocations);
   }
 
   const handleScroll = (e) => {
@@ -88,14 +106,16 @@ export default function Carousel({
       className={'carousel ' + className}
     >
         <Button
-          className={`carousel-btn carousel-back ${scrollPos > 0 ? 'show' : ''}`}
-          type="dark"
+          className={`carousel-btn carousel-back ${
+            scrollPos > 0 && overflowExists ? 'show' : ''
+          } ${btnPreventHide ? 'dont-hide' : ''}`}
+          styleType={btnStyleType}
           onClick={handleBackward}
         >
           <IoIosArrowBack className="arrow-icon"/>
         </Button>
         <div
-          className="carousel-scroll custom-scrollbar"
+          className={`carousel-scroll custom-scrollbar ${hideScrollbar ? 'hide-scrollbar' : ''}`}
           ref={scroll}
           onScroll={handleScroll}
         >
@@ -107,8 +127,10 @@ export default function Carousel({
           </div>
         </div>
         <Button
-          className={`carousel-btn carousel-next ${scrollPos < pageLocations[pageLocations.length - 1] ? 'show' : ''}`}
-          type="dark"
+          className={`carousel-btn carousel-next ${
+            scrollPos < pageLocations[pageLocations.length - 1] && overflowExists ? 'show' : ''
+          } ${btnPreventHide ? 'dont-hide' : ''}`}
+          styleType={btnStyleType}
           onClick={handleForward}
         >
           <IoIosArrowForward className="arrow-icon"/>

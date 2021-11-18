@@ -8,14 +8,15 @@ import "./styles.scss";
 export default function Button({
   children,
   className = "",
-  type = "light",
+  contentType = "icon",
+  styleType = "light",
   id = "",
   onClick = (e) => {},
 }) {
   return(
     <button
       id={id}
-      className={`btn-${type} ${className}`}
+      className={`btn-${styleType} btn-${contentType} ${className}`}
       onClick={onClick}
     >
       { children }

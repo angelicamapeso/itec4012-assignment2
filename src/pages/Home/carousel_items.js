@@ -6,6 +6,15 @@ import carousel1_4 from "../../img/carousel1_4.webp";
 import carousel1_5 from "../../img/carousel1_5.webp";
 import carousel1_6 from "../../img/carousel1_6.webp";
 
+import carousel2_1 from "../../img/carousel2_1.webp";
+import carousel2_2 from "../../img/carousel2_2.webp";
+import carousel2_3 from "../../img/carousel2_3.webp";
+import carousel2_4 from "../../img/carousel2_4.webp";
+import carousel2_5 from "../../img/carousel2_5.webp";
+import carousel2_6 from "../../img/carousel2_6.webp";
+import carousel2_7 from "../../img/carousel2_7.webp";
+
+
 export const CAROUSEL1 = [
   {
     title: "IKEA Family offers",
@@ -42,5 +51,36 @@ export const CAROUSEL1 = [
     para: "There's more to paying less.",
     src: carousel1_6,
     color: "#cc0008",
+  },
+];
+
+export const CAROUSEL2 = [
+  {
+    btnText: "Water saving",
+    src: carousel2_1,
+  },
+  {
+    btnText: "Energy saving",
+    src: carousel2_2,
+  },
+  {
+    btnText: "Healthier Home",
+    src: carousel2_3,
+  },
+  {
+    btnText: "Reducing waste",
+    src: carousel2_4,
+  },
+  {
+    btnText: "More sustainable furniture",
+    src: carousel2_5,
+  },
+  {
+    btnText: "More sustainable materials",
+    src: carousel2_6,
+  },
+  {
+    btnText: "More sustainable food",
+    src: carousel2_7,
   },
 ];

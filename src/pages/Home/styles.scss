@@ -1,6 +1,70 @@
 @use "../../colors";
 @use "../../breakpoints";
 
+section > h2 {
+  margin-bottom: 2rem;
+}
+
+#promotional {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2rem calc(1.25rem / 2 * -1);
+
+  @include breakpoints.sm {
+    flex-direction: row;
+  }
+
+  @include breakpoints.lg {
+    margin-top: 4rem;
+  }
+
+  > div {
+    box-sizing: border-box;
+    width: 100%;
+
+    @include breakpoints.sm {
+      width: 50%;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #main-promotion {
+    > div {
+      margin: calc(1.25rem / 2);
+      margin-bottom: 1rem;
+
+      @include breakpoints.lg {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #additional-promotions {
+    > div {
+      margin: calc(1.25rem / 2);
+      margin-bottom: 1rem;
+
+      @include breakpoints.lg {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .link-wrapper p {
+      margin: 0;
+    }
+
+    .link-wrapper p span {
+      margin-right: 0.1875rem;
+      line-height: 1.7;
+    }
+  }
+}
+
 #carousel1 {
   margin-bottom: 1.5rem;
 }
@@ -73,5 +137,406 @@
 
   .card:hover .underline {
     text-decoration: underline;
+  }
+}
+
+.light-banner {
+  color: colors.$black;
+}
+
+.dark-banner {
+  color: white;
+}
+
+.banner-card {
+  .card-contents {
+    padding: 2.5rem;
+    padding-bottom: 60px;
+
+    @include breakpoints.md {
+      padding: calc(2.5rem * 2);
+    }
+
+    @include breakpoints.lg {
+      padding: 3rem;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 2rem;
+    line-height: 1.571;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#carousel2 .carousel-wrapper {
+  .link-wrapper {
+    width: calc(309px * 3 / 4);
+    flex-shrink: 0;
+  }
+
+  .link-wrapper:first-child {
+    margin-right: 0.625rem;
+  }
+
+  .link-wrapper:last-child {
+    margin-left: 0.625rem;
+  }
+
+  .link-wrapper:not(:first-child):not(:last-child) {
+    margin: 0 0.625rem;
+  }
+
+  .img-card .card-contents {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2.5rem;
+  }
+
+  .text-card .card-contents {
+    color: white;
+    padding: 2.5rem 2rem;
+
+    h3 {
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+}
+
+#image-list1 {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 0 1.25rem 0;
+
+  @include breakpoints.md {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    padding: 0 0 0 1.25rem;
+    margin: 0 -1.25rem -2.5rem -1.25rem;
+  }
+
+  .link-wrapper {
+    width: 100%;
+    min-width: 33vw;
+
+    &:not(:last-child) {
+      margin-right: 0.75rem;
+    }
+
+    @include breakpoints.md {
+      min-width: auto;
+      width: calc(100% / 3 - 1.25rem);
+      margin: 0 1.25rem 2.5rem 0;
+      box-sizing: border-box;
+    }
+  }
+
+  .card-img-wrapper {
+    padding-bottom: 56.25%;
+  }
+
+  .card-contents {
+    padding-top: 1.25rem;
+  }
+}
+
+#icon-cards1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .icon-card {
+    flex: 1 1 auto;
+    margin-bottom: 0.0625rem;
+    margin-right: 0.0625rem;
+    height: auto;
+
+    @include breakpoints.sm {
+      width: calc(50% - 0.5rem * 4);
+    }
+
+    @include breakpoints.md {
+      width: calc(25% - 0.5rem);
+    }
+
+    .card-contents {
+      align-items: flex-start;
+      text-align: left;
+      padding: 2rem;
+
+      @include breakpoints.sm {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .icon,
+    p,
+    a {
+      color: colors.$dark-gray;
+    }
+
+    .icon,
+    h3,
+    p,
+    a {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    h3 {
+      line-height: 1.5;
+    }
+
+    p,
+    a {
+      line-height: 1.571;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: colors.$black;
+    }
+  }
+}
+
+section > .service-btn {
+  margin-top: 1.5rem;
+}
+
+#image-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(1.25rem / 2 * -1);
+
+  .card {
+    margin: calc(1.25rem / 2);
+    margin-bottom: 2.5rem;
+    flex-basis: calc(100% - 1.25rem);
+
+    @include breakpoints.sm {
+      flex-basis: calc(49.99% - 1.25rem);
+      margin: calc(1.25rem / 2);
+    }
+
+    @include breakpoints.md {
+      flex-basis: calc(33.33% - 1.25rem);
+    }
+  }
+
+  .card-contents {
+    color: colors.$dark-gray;
+    padding-top: 1rem;
+
+    @include breakpoints.lg {
+      padding-top: 2.5rem;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      line-height: 1.571;
+    }
+
+    button {
+      font-weight: bold;
+      margin-top: 1rem;
+
+      @include breakpoints.lg {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}
+
+#important-info {
+  margin-top: 2.5rem;
+
+  @include breakpoints.sm {
+    margin-top: 4rem;
+  }
+}
+
+#image-list3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(1.25rem / 2 * -1);
+
+  .card {
+    margin: calc(1.25rem / 2);
+    flex-grow: 0;
+    flex-basis: calc(100% - 1.25rem);
+
+    @include breakpoints.sm {
+      flex-basis: calc(49.99% - 1.25rem);
+    }
+
+    @include breakpoints.md {
+      flex-basis: calc(33.33% - 1.25rem);
+    }
+  }
+
+  .card-contents {
+    h3,
+    img,
+    p:last-of-type {
+      margin-bottom: 1rem;
+
+      @include breakpoints.lg {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    p {
+      line-height: 1.571;
+      color: colors.$dark-gray;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    button {
+      font-weight: bold;
+    }
+  }
+}
+
+#furniture-cards {
+  display: flex;
+  flex-direction: column;
+
+  .load-btn {
+    margin-top: 1.5rem;
+    align-self: center;
+  }
+}
+
+#btn-carousel1 {
+  margin-bottom: 1.5rem;
+
+  .carousel-scroll {
+    padding-bottom: 0;
+    overflow-y: hidden;
+  }
+
+  .carousel-btn {
+    padding: 0 0.5rem;
+    height: 2rem;
+    box-shadow: 0px 4px 16px rgb(0 0 0 / 10%);
+
+    @include breakpoints.md {
+      transform: translate(0, -50%);
+    }
+  }
+
+  .arrow-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .carousel-next {
+    right: 0.75rem;
+  }
+
+  .carousel-back {
+    left: 0.75rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+  }
+}
+
+#furniture-list1 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  grid-auto-flow: row dense;
+  grid-auto-rows: 1fr;
+
+  @include breakpoints.sm {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+
+  @include breakpoints.sm {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+
+  .link-wrapper {
+    grid-column: span 3;
+    grid-row: span 4;
+
+    @include breakpoints.md {
+      grid-column: span 2;
+    }
+
+    .room-card {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .link-wrapper.offset-img {
+    grid-row: span 3;
+  }
+}
+
+#furniture-info-card {
+  .card {
+    @include breakpoints.md {
+      width: calc(7 / 12 * (100% - (11 * 1.25rem)) + (6 * 1.25rem));
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1.45;
+    }
+
+    p {
+      color: colors.$dark-gray;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.571;
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
 }

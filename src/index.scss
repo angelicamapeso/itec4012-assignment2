@@ -45,6 +45,22 @@ main {
   }
 }
 
+section {
+  margin-bottom: 2.5rem;
+
+  @include breakpoints.lg {
+    margin-bottom: 4rem;
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border-top: 1px solid colors.$light-gray;
+  margin: 1.25rem 0;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   height: 0.7rem;
 }
