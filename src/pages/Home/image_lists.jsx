@@ -14,6 +14,19 @@ import imageList3_1 from "../../img/imageList3_1.webp";
 import imageList3_2 from "../../img/imageList3_2.webp";
 import imageList3_3 from "../../img/imageList3_3.webp";
 
+import imageList4_1 from "../../img/imageList4_1.webp";
+import imageList4_2 from "../../img/imageList4_2.webp";
+import imageList4_3 from "../../img/imageList4_3.webp";
+import imageList4_4 from "../../img/imageList4_4.webp";
+import imageList4_5 from "../../img/imageList4_5.webp";
+import imageList4_6 from "../../img/imageList4_6.webp";
+import imageList4_7 from "../../img/imageList4_7.webp";
+import imageList4_8 from "../../img/imageList4_8.webp";
+import imageList4_9 from "../../img/imageList4_9.webp";
+import imageList4_10 from "../../img/imageList4_10.webp";
+import imageList4_11 from "../../img/imageList4_11.jpg";
+import imageList4_12 from "../../img/imageList4_12.webp";
+
 export const IMAGE_LIST_1 = [
   {
     src: imageList1_1,
@@ -110,5 +123,66 @@ export const IMAGE_LIST_3 = [
       </p>
     </>,
     btnTxt: "See all product recalls",
+  },
+];
+
+export const IMAGE_LIST_4 = [
+  {
+    src: imageList4_1,
+  },
+  {
+    src: imageList4_2,
+    btnPosTop: '30%',
+    btnPosLeft: '45%',
+  },
+  {
+    src: imageList4_3,
+    btnPosTop: '80%',
+    btnPosLeft: '45%',
+  },
+  {
+    src: imageList4_4,
+    btnPosTop: '50%',
+    btnPosLeft: '23%',
+  },
+  {
+    src: imageList4_5,
+    btnPosTop: '60%',
+    btnPosLeft: '65%',
+  },
+  {
+    src: imageList4_6,
+    btnPosTop: '60%',
+    btnPosLeft: '10%',
+  },
+  {
+    src: imageList4_7,
+    btnPosTop: '80%',
+    btnPosLeft: '50%',
+  },
+  {
+    src: imageList4_8,
+    btnPosTop: '65%',
+    btnPosLeft: '35%',
+  },
+  {
+    src: imageList4_9,
+    btnPosTop: '45%',
+    btnPosLeft: '20%',
+  },
+  {
+    src: imageList4_10,
+    btnPosTop: '20%',
+    btnPosLeft: '50%',
+  },
+  {
+    src: imageList4_11,
+    btnPosTop: '70%',
+    btnPosLeft: '50%',
+  },
+  {
+    src: imageList4_12,
+    btnPosTop: '60%',
+    btnPosLeft: '15%',
   },
 ];
