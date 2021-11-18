@@ -2,6 +2,7 @@ import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
 import { IMAGE_LIST_1, IMAGE_LIST_2, IMAGE_LIST_3 } from "./image_lists.jsx";
 import { ICON_CARDS_1 } from "./icon_card_list.jsx";
+import { BUTTON_LIST_1 } from "./button_carousel_list.js";
 
 // icons
 import { HiOutlineArrowRight } from "react-icons/hi";
@@ -125,6 +126,26 @@ export default function Home() {
               </Card>
           ))}
         </div>
+      </section>
+      <section>
+        <h2>More ideas and inspiration</h2>
+        <Carousel
+          id="btn-carousel1"
+          numPages={{ def: 6, sm: 4, md: 2, lg: 1 }}
+          btnStyleType="light"
+          btnPreventHide={true}
+          hideScrollbar={true}
+        >
+          { BUTTON_LIST_1.map(btnTxt => (
+              <Button
+                className="bold"
+                styleType="gray"
+                contentType="text"
+              >
+                {btnTxt}
+              </Button>
+          ))}
+        </Carousel>
       </section>
     </>
   );

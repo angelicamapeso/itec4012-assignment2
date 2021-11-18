@@ -369,3 +369,38 @@ section > .service-btn {
     }
   }
 }
+
+#btn-carousel1 {
+  .carousel-scroll {
+    padding-bottom: 0;
+    overflow-y: hidden;
+  }
+
+  .carousel-btn {
+    padding: 0 0.5rem;
+    height: 2rem;
+    box-shadow: 0px 4px 16px rgb(0 0 0 / 10%);
+
+    @include breakpoints.md {
+      transform: translate(0, -50%);
+    }
+  }
+
+  .arrow-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .carousel-next {
+    right: 0.75rem;
+  }
+
+  .carousel-back {
+    left: 0.75rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+  }
+}
