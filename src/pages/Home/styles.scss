@@ -479,7 +479,7 @@ section > .service-btn {
 
 #furniture-list1 {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-column-gap: 0.75rem;
   grid-row-gap: 0.75rem;
   grid-auto-flow: row dense;
