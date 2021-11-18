@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { CAROUSEL1, CAROUSEL2 } from "./carousel_items.js";
-import { IMAGE_LIST_1, IMAGE_LIST_2, IMAGE_LIST_3 } from "./image_lists.jsx";
+import { IMAGE_LIST_1, IMAGE_LIST_2, IMAGE_LIST_3, IMAGE_LIST_4 } from "./image_lists.jsx";
 import { ICON_CARDS_1 } from "./icon_card_list.jsx";
 import { BUTTON_LIST_1 } from "./button_carousel_list.js";
 
@@ -13,6 +13,7 @@ import Card from "../../components/Card";
 import Button from "../../components/Button";
 import LinkWrapper from "../../components/LinkWrapper";
 import Carousel from "../../components/Carousel";
+import RoomCard from "../../components/RoomCard";
 
 export default function Home() {
   return (
@@ -127,7 +128,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section>
+      <section id="furniture-cards">
         <h2>More ideas and inspiration</h2>
         <Carousel
           id="btn-carousel1"
@@ -146,6 +147,18 @@ export default function Home() {
               </Button>
           ))}
         </Carousel>
+        <div id="furniture-list1">
+          { IMAGE_LIST_4.map((room, index) => (
+            <LinkWrapper className={index === 1 ? 'offset-img' : ''}>
+              <RoomCard
+                src={room.src}
+                btnPosTop={room.btnPosTop}
+                btnPosLeft={room.btnPosLeft}
+              />
+            </LinkWrapper>
+          ))}
+        </div>
+        <Button className="load-btn bold" styleType="dark" contentType="text">Load 12 more</Button>
       </section>
     </>
   );
