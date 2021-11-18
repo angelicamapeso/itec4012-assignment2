@@ -1,0 +1,112 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+footer {
+  width: 100%;
+  margin-top: 4rem;
+  background-color: colors.$off-white;
+  padding: 4rem 0 0 0;
+  display: flex;
+}
+
+footer .footer-container {
+  max-width: 112rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+
+  @include breakpoints.sm {
+    padding: 0 2rem;
+  }
+
+  @include breakpoints.md {
+    padding: 0 3rem;
+  }
+
+  @include breakpoints.lg {
+    padding: 0 2.5rem 0 1.25rem;
+    display: grid;
+    grid-column-gap: 1.25rem;
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+  }
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 112rem;
+  margin-top: 1.25rem;
+  width: 100%;
+
+  @include breakpoints.lg {
+    grid-column: 2/14;
+    grid-row: 1;
+  }
+}
+
+.footer-lists {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoints.md {
+    flex-direction: row;
+  }
+
+  .intro {
+    flex: 0 0 100%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoints.md {
+      margin-bottom: 4rem;
+      padding: 0 8% 0 0;
+      flex-basis: 30%;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 0.9375rem;
+      line-height: 1.571;
+    }
+  }
+
+  .lists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    flex: 1 0 100%;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+
+    @include breakpoints.md {
+      flex: 70%;
+      margin-bottom: 4rem;
+      flex-direction: row;
+    }
+
+    > li {
+      flex: 0 0 25%;
+      border-top: 1px solid colors.$light-gray;
+
+      &:last-child {
+        border-bottom: 1px solid colors.$light-gray;
+      }
+
+      @include breakpoints.md {
+        border: none;
+      }
+    }
+
+    > li:not(:first-child) {
+      @include breakpoints.md {
+        padding-left: 1.25rem;
+      }
+    }
+  }
+}
