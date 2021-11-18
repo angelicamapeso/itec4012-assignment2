@@ -1,0 +1,84 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 1.25rem;
+
+  h2 {
+    font-size: 1.5625rem;
+  }
+
+  button {
+    padding: 0 1rem;
+    height: 3.5rem;
+
+    .more-icon {
+      color: colors.$dark-gray;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.login-banner {
+  .card-contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.25rem;
+    margin: 2.5rem 0;
+    border: 1px solid colors.$light-gray;
+    border-radius: 4px;
+
+    h3,
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    p {
+      color: colors.$dark-gray;
+    }
+
+    a {
+      color: colors.$dark-gray;
+    }
+
+    a.underline {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: colors.$black;
+    }
+
+    .person-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.recommend-section {
+  border-top: 1px solid colors.$light-gray;
+  padding-top: 2.5rem;
+
+  #recommended .product-card {
+    flex-shrink: 0;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    margin-bottom: 2.5rem;
+    flex-basis: calc(43.47826% - 1.25rem);
+    max-width: 25rem;
+
+    @include breakpoints.sm {
+      flex-basis: calc(29.41176% - 1.25rem);
+    }
+  }
+}

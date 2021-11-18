@@ -3,6 +3,7 @@ import "./styles.scss";
 import Logo from "../../img/ikea-logo.svg";
 import Button from "../Button";
 import Search from "../Search";
+import { Link } from "react-router-dom";
 import { MdOutlineLocationOn, MdOutlineShoppingBasket, MdPersonOutline } from "react-icons/md";
 import { FiTruck, FiHeart, FiMenu } from "react-icons/fi";
 
@@ -11,7 +12,7 @@ export default function MainNav() {
     <header>
       <nav>
         <div className="header-wrapper">
-          <a className="logo-wrapper" href="/"><img className="logo" alt="Home" src={Logo} /></a>
+          <Link className="logo-wrapper" to="/"><img className="logo" alt="Home" src={Logo} /></Link>
           <ul className="nav-text">
             <li><a href="/" className="bold">Products</a></li>
             <li><a href="/" className="bold">Rooms</a></li>
@@ -23,7 +24,7 @@ export default function MainNav() {
             <li id="truck"><Button><FiTruck className="icon" /></Button></li>
             <li><Button><MdPersonOutline className="icon" /></Button></li>
             <li><Button><FiHeart className="icon" /></Button></li>
-            <li><Button><MdOutlineShoppingBasket className="icon" /></Button></li>
+            <li><Link to="/cart"><Button><MdOutlineShoppingBasket className="icon" /></Button></Link></li>
             <li id="menu"><Button><FiMenu className="icon" /></Button></li>
           </ul>
           <Search className="search-form" />
