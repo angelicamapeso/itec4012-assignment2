@@ -17,6 +17,7 @@ export default function Carousel({
 }) {
   const [pageLocations, setPageLocations] = useState([]);
   const [scrollPos, setScrollPos] = useState(0);
+  const [overflowExists, setOverflowExists] = useState(true);
 
   const scroll = useRef(null);
   const wrapper = useRef(null);
@@ -37,10 +38,13 @@ export default function Carousel({
     }
     currentNumPages -= 1;
 
-    if (currentNumPages <= 1
+    if (currentNumPages < 1
       && wrapper.current.scrollWidth > wrapper.current.offsetWidth
     ) {
-      currentNumPages = 2;
+      setOverflowExists(true);
+      currentNumPages = 1;
+    } else {
+      setOverflowExists(false);
     }
 
     return currentNumPages;
@@ -48,8 +52,12 @@ export default function Carousel({
 
   const generatePageLocations = (currentNumPages) => {
     const currentPageLocations = []
-    for (let i = 0; i <= currentNumPages; i++) {
-      currentPageLocations.push(Math.round(((wrapper.current.scrollWidth - wrapper.current.clientWidth) / currentNumPages) * i));
+    if (currentNumPages > 0) {
+      for (let i = 0; i <= currentNumPages; i++) {
+        currentPageLocations.push(Math.round(((wrapper.current.scrollWidth - wrapper.current.offsetWidth) / currentNumPages) * i));
+      }
+    } else {
+      currentPageLocations.push(0);
     }
     return currentPageLocations;
   }
@@ -67,10 +75,8 @@ export default function Carousel({
     let currentNumPages = calcCurrentNumPages();
 
     let pageLocations = []
-    if (currentNumPages !== pageLocations.length) {
-      pageLocations = generatePageLocations(currentNumPages);
-      setPageLocations(pageLocations);
-    }
+    pageLocations = generatePageLocations(currentNumPages);
+    setPageLocations(pageLocations);
   }
 
   const handleScroll = (e) => {
@@ -98,7 +104,7 @@ export default function Carousel({
     >
         <Button
           className={`carousel-btn carousel-back ${
-            scrollPos > 0 && wrapper.current.scrollWidth > wrapper.current.offsetWidth ? 'show' : ''
+            scrollPos > 0 && overflowExists ? 'show' : ''
           } ${btnPreventHide ? 'dont-hide' : ''}`}
           styleType={btnStyleType}
           onClick={handleBackward}
@@ -119,7 +125,7 @@ export default function Carousel({
         </div>
         <Button
           className={`carousel-btn carousel-next ${
-            scrollPos < pageLocations[pageLocations.length - 1] &&  wrapper.current.scrollWidth > wrapper.current.offsetWidth ? 'show' : ''
+            scrollPos < pageLocations[pageLocations.length - 1] && overflowExists ? 'show' : ''
           } ${btnPreventHide ? 'dont-hide' : ''}`}
           styleType={btnStyleType}
           onClick={handleForward}
