@@ -1,0 +1,90 @@
+@use "../../colors";
+@use "../../breakpoints";
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+  @include breakpoints.md {
+    margin-bottom: 1rem;
+  }
+
+  &.clickable,
+  &.clickable * {
+    cursor: pointer;
+  }
+
+  &.reg {
+    cursor: auto;
+  }
+
+  .accordion-button {
+    padding: 2rem 0;
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    justify-content: center;
+
+    &.show {
+      display: flex;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .accordion-arrow {
+    transition: transform 0.3s;
+    height: 1.5rem;
+    width: 1.5rem;
+    vertical-align: middle;
+
+    &.expanded {
+      transform: rotate(180deg);
+    }
+
+    &.closed {
+      transform: rotate(0);
+    }
+  }
+}
+
+.accordion-list {
+  list-style: none;
+  padding-left: 0;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.4, 1);
+  overflow: hidden;
+
+  &.show {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.hide {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.accordion-item {
+  margin-bottom: 2rem;
+
+  @include breakpoints.md {
+    margin-bottom: 0.75rem;
+  }
+
+  .link-wrapper {
+    color: colors.$dark-gray;
+    line-height: 1.571;
+  }
+}
+
+.accordion-item:hover .underline {
+  text-decoration: underline;
+}
