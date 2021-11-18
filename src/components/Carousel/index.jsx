@@ -41,10 +41,7 @@ export default function Carousel({
     if (currentNumPages < 1
       && wrapper.current.scrollWidth > wrapper.current.offsetWidth
     ) {
-      setOverflowExists(true);
       currentNumPages = 1;
-    } else {
-      setOverflowExists(false);
     }
 
     return currentNumPages;
@@ -72,6 +69,12 @@ export default function Carousel({
   }
 
   const handleResize = () => {
+    if (wrapper.current.scrollWidth > wrapper.current.offsetWidth) {
+      setOverflowExists(true);
+    } else {
+      setOverflowExists(false);
+    }
+
     let currentNumPages = calcCurrentNumPages();
 
     let pageLocations = []
