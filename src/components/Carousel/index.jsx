@@ -27,7 +27,6 @@ export default function Carousel({
     return  () => window.removeEventListener('resize', handleResize);
   }, [])
 
-
   const calcCurrentNumPages = () => {
     let currentNumPages = numPages.def;
     for (const breakpointSize in BREAKPOINTS) {
@@ -37,6 +36,13 @@ export default function Carousel({
       }
     }
     currentNumPages -= 1;
+
+    if (currentNumPages <= 1
+      && wrapper.current.scrollWidth > wrapper.current.offsetWidth
+    ) {
+      currentNumPages = 2;
+    }
+
     return currentNumPages;
   }
 
@@ -91,7 +97,9 @@ export default function Carousel({
       className={'carousel ' + className}
     >
         <Button
-          className={`carousel-btn carousel-back ${scrollPos > 0 ? 'show' : ''} ${btnPreventHide ? 'dont-hide' : ''}`}
+          className={`carousel-btn carousel-back ${
+            scrollPos > 0 && wrapper.current.scrollWidth > wrapper.current.offsetWidth ? 'show' : ''
+          } ${btnPreventHide ? 'dont-hide' : ''}`}
           styleType={btnStyleType}
           onClick={handleBackward}
         >
@@ -110,7 +118,9 @@ export default function Carousel({
           </div>
         </div>
         <Button
-          className={`carousel-btn carousel-next ${scrollPos < pageLocations[pageLocations.length - 1] ? 'show' : ''} ${btnPreventHide ? 'dont-hide' : ''}`}
+          className={`carousel-btn carousel-next ${
+            scrollPos < pageLocations[pageLocations.length - 1] &&  wrapper.current.scrollWidth > wrapper.current.offsetWidth ? 'show' : ''
+          } ${btnPreventHide ? 'dont-hide' : ''}`}
           styleType={btnStyleType}
           onClick={handleForward}
         >
