@@ -1,10 +1,9 @@
 import "./styles.scss";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
 import LinkWrapper from "../LinkWrapper";
-import { useEffect } from "react/cjs/react.development";
 
 export default function AccordionMenu({
   title = "",

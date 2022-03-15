@@ -1,13 +1,12 @@
 import "./styles.scss";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsStarFill } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import { MdOutlineShoppingBasket } from "react-icons/md";
 
 import Button from "../Button";
 import LinkWrapper from "../LinkWrapper";
-import { useEffect } from "react/cjs/react.development";
 
 export default function ProductCard({
   src = "https://source.unsplash.com/700x933/?furniture",
