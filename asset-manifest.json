@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/itec4012-assignment2/static/css/main.24791f22.chunk.css",
-    "main.js": "/itec4012-assignment2/static/js/main.156e1e04.chunk.js",
-    "main.js.map": "/itec4012-assignment2/static/js/main.156e1e04.chunk.js.map",
-    "runtime-main.js": "/itec4012-assignment2/static/js/runtime-main.aec7e25d.js",
-    "runtime-main.js.map": "/itec4012-assignment2/static/js/runtime-main.aec7e25d.js.map",
-    "static/js/2.5a41d343.chunk.js": "/itec4012-assignment2/static/js/2.5a41d343.chunk.js",
-    "static/js/2.5a41d343.chunk.js.map": "/itec4012-assignment2/static/js/2.5a41d343.chunk.js.map",
-    "static/js/3.16fc9358.chunk.js": "/itec4012-assignment2/static/js/3.16fc9358.chunk.js",
-    "static/js/3.16fc9358.chunk.js.map": "/itec4012-assignment2/static/js/3.16fc9358.chunk.js.map",
+    "main.js": "/itec4012-assignment2/static/js/main.f51acf50.chunk.js",
+    "main.js.map": "/itec4012-assignment2/static/js/main.f51acf50.chunk.js.map",
+    "runtime-main.js": "/itec4012-assignment2/static/js/runtime-main.818c583a.js",
+    "runtime-main.js.map": "/itec4012-assignment2/static/js/runtime-main.818c583a.js.map",
+    "static/js/2.20c51060.chunk.js": "/itec4012-assignment2/static/js/2.20c51060.chunk.js",
+    "static/js/2.20c51060.chunk.js.map": "/itec4012-assignment2/static/js/2.20c51060.chunk.js.map",
+    "static/js/3.ec2d9937.chunk.js": "/itec4012-assignment2/static/js/3.ec2d9937.chunk.js",
+    "static/js/3.ec2d9937.chunk.js.map": "/itec4012-assignment2/static/js/3.ec2d9937.chunk.js.map",
     "index.html": "/itec4012-assignment2/index.html",
     "static/css/main.24791f22.chunk.css.map": "/itec4012-assignment2/static/css/main.24791f22.chunk.css.map",
-    "static/js/2.5a41d343.chunk.js.LICENSE.txt": "/itec4012-assignment2/static/js/2.5a41d343.chunk.js.LICENSE.txt",
+    "static/js/2.20c51060.chunk.js.LICENSE.txt": "/itec4012-assignment2/static/js/2.20c51060.chunk.js.LICENSE.txt",
     "static/media/carousel1_1.8dfee83b.jpg": "/itec4012-assignment2/static/media/carousel1_1.8dfee83b.jpg",
     "static/media/carousel1_2.23f5fe50.webp": "/itec4012-assignment2/static/media/carousel1_2.23f5fe50.webp",
     "static/media/carousel1_3.042725e7.webp": "/itec4012-assignment2/static/media/carousel1_3.042725e7.webp",
@@ -79,9 +79,9 @@
     "static/media/text-img-3.f953a724.webp": "/itec4012-assignment2/static/media/text-img-3.f953a724.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.aec7e25d.js",
-    "static/js/2.5a41d343.chunk.js",
+    "static/js/runtime-main.818c583a.js",
+    "static/js/2.20c51060.chunk.js",
     "static/css/main.24791f22.chunk.css",
-    "static/js/main.156e1e04.chunk.js"
+    "static/js/main.f51acf50.chunk.js"
   ]
 }
