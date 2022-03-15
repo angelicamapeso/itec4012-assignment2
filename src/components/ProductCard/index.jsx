@@ -28,6 +28,7 @@ export default function ProductCard({
     if (showStarRating) {
       setupStarRating();
     }
+  // eslint-disable-next-line
   }, [showStarRating])
 
   const setupStarRating = () => {
